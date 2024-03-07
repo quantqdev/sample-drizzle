@@ -1,11 +1,12 @@
 import "dotenv/config";
+import { faker } from "@faker-js/faker";
 import { db, pool } from "./db";
 import { NewUser, User, usersTable } from "./schema";
 
 const main = async () => {
   const user: NewUser = {
-    fullName: "test",
-    phone: "0123456789",
+    fullName: faker.internet.userName(),
+    phone: faker.phone.number(),
   };
   const newUsers: NewUser[] = await db.insert(usersTable).values(user).returning();
   console.log(newUsers);

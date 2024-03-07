@@ -4,6 +4,7 @@
 		"migrate": "ts-node src/migrate.ts"
 	},
 	"dependencies": {
+		"@faker-js/faker": "^8.4.1",
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.29.5",
 		"pg": "^8.11.3"
