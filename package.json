@@ -1,5 +1,7 @@
 {
 	"scripts": {
+		"build": "tsc",
+		"start": "node dist/index.js",
 		"generate-migration": "drizzle-kit generate:pg",
 		"migrate": "ts-node src/migrate.ts"
 	},
