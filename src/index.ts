@@ -5,7 +5,7 @@ import { NewUser, User, usersTable } from "./schema";
 
 const main = async () => {
   const user: NewUser = {
-    fullName: faker.internet.userName(),
+    fullName: faker.person.fullName(),
     phone: faker.phone.number(),
   };
   const newUsers: NewUser[] = await db.insert(usersTable).values(user).returning();
